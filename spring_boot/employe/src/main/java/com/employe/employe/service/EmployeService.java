@@ -8,9 +8,13 @@ import org.springframework.stereotype.Service;
 
 import com.employe.employe.dao.EmployeRepo;
 import com.employe.employe.models.Employe;
+
+import jakarta.transaction.Transactional;
+
 import com.employe.employe.exceptions.UserNotFoundException;
 
 @Service
+@Transactional
 public class EmployeService {
     @Autowired
     private EmployeRepo employeRepo;
